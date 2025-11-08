@@ -2,7 +2,7 @@
 
 ### 数据
 
-私有数据
+私有数据 跟用户相关，需要登录
 公有数据
 
 #### 公有数据
@@ -11,15 +11,15 @@
 
 - 市场行情信息
   - minTicker
-    - lasPrice
-    - markPrice
-    - indexPrice
+    - lasPrice 最新价
+    - markPrice 标记价格 用于 合约 公允价格，计算资金费率，使得合约价格不至于偏离现货价格太远
+    - indexPrice 指数价格，用于 现货 公允价格 取不同交易所 加权平均 
   - 24Tickers
     - 24hr 最高最低价
     - 24hr 成交量
     - miniTicker
-  - kline
-  - orderBook  
+  - kline 历史成交
+  - orderBook  委托
 
 
 #### 私有数据
@@ -34,8 +34,8 @@
 
 ### 数据变化很快
 
-快照 某一时刻 
-推送
+快照 某一时刻 的数据
+推送 实时数据
 
 http 先是请求一遍快照，一般是全量数据
 ws 推送增量数据，进行增删改
